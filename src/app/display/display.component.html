@@ -1,2 +1,9 @@
+<h1>Display Component</h1>
 <h2>Movie name is </h2><h4 class="text-success">Avengers: End Game</h4>
 <h2>Movie name from typescript class variable is </h2><h4 class="text-primary">{{ myMovie }}</h4>
+<h2>Movie name in a text box using string interpolation  </h2><input type="text" value="{{ myMovie }}">
+<h2>Movie name in a text box using property binding []</h2><input type="text" [value]="myMovie">
+<h2>Click the button to change the movie name(using event binding () )</h2>
+<div>
+    <button type="button" class="btn btn-warning" (click)="changeMovie()">Change Movie Name</button>
+</div>

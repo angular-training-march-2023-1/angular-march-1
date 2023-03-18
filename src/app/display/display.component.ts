@@ -14,4 +14,8 @@ export class DisplayComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeMovie(){
+    this.myMovie = "Harry Potter and the Order of Phoenix";
+  }
+
 }
