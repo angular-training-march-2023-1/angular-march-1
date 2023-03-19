@@ -8,6 +8,8 @@ import { CounterComponent } from './counter/counter.component';
 import { FormsModule } from '@angular/forms';
 import { ColorsParentComponent } from './colors-parent/colors-parent.component';
 import { ColorsChildComponent } from './colors-parent/colors-child/colors-child.component';
+import { StudentListComponent } from './student/student-list/student-list.component';
+import { HoverHighlightDirective } from './custom-directive/hover-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { ColorsChildComponent } from './colors-parent/colors-child/colors-child.
     DisplayComponent,
     CounterComponent,
     ColorsParentComponent,
-    ColorsChildComponent
+    ColorsChildComponent,
+    StudentListComponent,
+    HoverHighlightDirective
   ],
   imports: [
     BrowserModule,

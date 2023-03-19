@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>LIST OF STUDENTS</h2>
+    <table class="table table-striped">
+        <thead class="bg-dark text-white">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>TOTAL MARKS</th>
+                <th>PERCENTAGE</th>
+                <th>DOB</th>
+                <th>GENDER</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr *ngFor="let stud of allStudents" [ngClass]="{'bg-danger':stud.studentTotalMarks<250, 'bg-success':stud.studentTotalMarks>=250}"> -->
+            <tr appHoverHighlight *ngFor="let stud of allStudents">
+                <td>{{ stud.id }}</td>
+                <td>{{ stud.studentName | uppercase }}</td>
+                <td>{{ stud.studentTotalMarks }}</td>
+                <td>{{ stud.studentTotalMarks/500 | percent }}</td>
+                <td>{{ stud.studentDOB | date:'short' }}</td>
+                <td>{{ stud.studentGender }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

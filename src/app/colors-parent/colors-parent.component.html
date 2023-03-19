@@ -15,7 +15,7 @@
 
             <!-- {{ color }} - <button type="button" class="btn btn-danger" (click)="removeColor(color)">Remove</button> -->
 
-            <app-colors-child [printColor]="color" (deleteEventEmitter)="removeColor($event)"></app-colors-child>
+            <app-colors-child appHoverHighlight [printColor]="color" (deleteEventEmitter)="removeColor($event)"></app-colors-child>
 
 
         </li>
