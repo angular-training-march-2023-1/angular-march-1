@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { HoverHighlightDirective } from './custom-directive/hover-highlight.dire
 import { NumberListComponent } from './number-list/number-list.component';
 import { ExpoPipe } from './custom-pipes/expo.pipe';
 import { FilterListPipe } from './custom-pipes/filter-list.pipe';
+import { TodoAnimationComponent } from './todo-animation/todo-animation.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { FilterListPipe } from './custom-pipes/filter-list.pipe';
     HoverHighlightDirective,
     NumberListComponent,
     ExpoPipe,
-    FilterListPipe
+    FilterListPipe,
+    TodoAnimationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
