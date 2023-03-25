@@ -8,6 +8,8 @@ import { Student } from '../student.model';
 })
 export class StudentListComponent implements OnInit {
 
+  filterData: string = '';
+
   allStudents: Student[] = [
     {
       id: 101,
@@ -44,4 +46,15 @@ export class StudentListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addTestStudent(){
+    let newStudent: Student = {
+      id: 0,
+      studentName: 'Test',
+      studentTotalMarks: 353,
+      studentDOB: new Date(7,7,1992),
+      studentGender: 'Female'
+    }
+
+    this.allStudents.push(newStudent);
+  }
 }

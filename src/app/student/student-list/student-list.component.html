@@ -1,5 +1,8 @@
 <div class="container">
     <h2>LIST OF STUDENTS</h2>
+    <div class="form-group m-3">
+        <input type="text" class="form-control" placeholder="Search by gender" [(ngModel)]="filterData">
+    </div>
     <table class="table table-striped">
         <thead class="bg-dark text-white">
             <tr>
@@ -13,9 +16,10 @@
         </thead>
         <tbody>
             <!-- <tr *ngFor="let stud of allStudents" [ngClass]="{'bg-danger':stud.studentTotalMarks<250, 'bg-success':stud.studentTotalMarks>=250}"> -->
-            <tr appHoverHighlight *ngFor="let stud of allStudents">
+            <tr appHoverHighlight *ngFor="let stud of allStudents | filterList:filterData">
                 <td>{{ stud.id }}</td>
                 <td>{{ stud.studentName | uppercase }}</td>
+                <!-- <td>{{ stud.studentTotalMarks | currency:'INR':'code' }}</td> -->
                 <td>{{ stud.studentTotalMarks }}</td>
                 <td>{{ stud.studentTotalMarks/500 | percent }}</td>
                 <td>{{ stud.studentDOB | date:'short' }}</td>
@@ -23,4 +27,5 @@
             </tr>
         </tbody>
     </table>
+    <button type="button" class="btn btn-success" (click)="addTestStudent()">Add Test Student</button>
 </div>

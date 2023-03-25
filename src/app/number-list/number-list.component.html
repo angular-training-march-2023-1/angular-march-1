@@ -1,0 +1,8 @@
+<div class="container">
+    <h2>Number List Component</h2>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let num of allNumbers">
+            {{ num }} - {{ num | expo:3 }} - {{ num | expo:2 }}
+        </li>
+    </ul>
+</div>

@@ -10,6 +10,9 @@ import { ColorsParentComponent } from './colors-parent/colors-parent.component';
 import { ColorsChildComponent } from './colors-parent/colors-child/colors-child.component';
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { HoverHighlightDirective } from './custom-directive/hover-highlight.directive';
+import { NumberListComponent } from './number-list/number-list.component';
+import { ExpoPipe } from './custom-pipes/expo.pipe';
+import { FilterListPipe } from './custom-pipes/filter-list.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { HoverHighlightDirective } from './custom-directive/hover-highlight.dire
     ColorsParentComponent,
     ColorsChildComponent,
     StudentListComponent,
-    HoverHighlightDirective
+    HoverHighlightDirective,
+    NumberListComponent,
+    ExpoPipe,
+    FilterListPipe
   ],
   imports: [
     BrowserModule,
