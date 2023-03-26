@@ -15,6 +15,7 @@ import { NumberListComponent } from './number-list/number-list.component';
 import { ExpoPipe } from './custom-pipes/expo.pipe';
 import { FilterListPipe } from './custom-pipes/filter-list.pipe';
 import { TodoAnimationComponent } from './todo-animation/todo-animation.component';
+import { ObservableDemoComponent } from './observable-demo/observable-demo.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TodoAnimationComponent } from './todo-animation/todo-animation.componen
     NumberListComponent,
     ExpoPipe,
     FilterListPipe,
-    TodoAnimationComponent
+    TodoAnimationComponent,
+    ObservableDemoComponent
   ],
   imports: [
     BrowserModule,

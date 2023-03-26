@@ -16,7 +16,8 @@
         </thead>
         <tbody>
             <!-- <tr *ngFor="let stud of allStudents" [ngClass]="{'bg-danger':stud.studentTotalMarks<250, 'bg-success':stud.studentTotalMarks>=250}"> -->
-            <tr appHoverHighlight *ngFor="let stud of allStudents | filterList:filterData">
+            <!-- <tr appHoverHighlight *ngFor="let stud of allStudents | filterList:filterData"> -->
+            <tr *ngFor="let stud of allStudents">
                 <td>{{ stud.id }}</td>
                 <td>{{ stud.studentName | uppercase }}</td>
                 <!-- <td>{{ stud.studentTotalMarks | currency:'INR':'code' }}</td> -->
