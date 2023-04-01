@@ -1,0 +1,14 @@
+steps to work with json server
+------------------------------
+1. install json server locally
+         npm install json-server
+
+2. once json server is installed , next start the json server and make it watch on a db.json file
+         json-server --watch db.json
+    this command will create a new db.json file with some default json data in it.
+
+3. remove all this data and put the student data in json format. this will make the json server create 
+    all the endpoints for student
+
+
+ 

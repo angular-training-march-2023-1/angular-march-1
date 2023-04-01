@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { filter, from, map, Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-observable-demo',
@@ -8,16 +8,30 @@ import { Observable } from 'rxjs';
 })
 export class ObservableDemoComponent implements OnInit {
 
-  myObservable: Observable<string> = new Observable((observer)=>{
-    console.log("streaming/emitting started...")
-    observer.next("A");
-    observer.next("B");
-    observer.next("C");
-    observer.error(new Error("Something went wrong!"));
-    observer.next("D");
-    observer.next("E");
-    observer.complete();
-  });
+  allColors: string[] = ["RED", "BLUE", "GREEN", "BROWN"];
+
+  // myObservable: Observable<string> = new Observable((observer)=>{
+  //   console.log("streaming/emitting started...")
+  //   observer.next("A");
+  //   observer.next("B");
+  //   observer.next("C");
+  //   observer.error(new Error("Something went wrong!"));
+  //   observer.next("D");
+  //   observer.next("E");
+  //   observer.complete();
+  // });
+
+
+  //myObservable: Observable<any> = of(25, 'hello', true, 10);
+
+  //myObservable: Observable<any> = of(25, 'hello', this.allColors, true, 10);
+
+  //myObservable: Observable<string> = from(this.allColors);
+
+  //myObservable: Observable<string> = from(this.allColors).pipe<string>(map((eachColor)=>eachColor.toLowerCase()));
+
+  myObservable: Observable<string> = from(this.allColors).pipe<string>(filter((eachColor)=>eachColor.startsWith("B")));
+
 
   constructor() { }
 

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +18,7 @@ import { ExpoPipe } from './custom-pipes/expo.pipe';
 import { FilterListPipe } from './custom-pipes/filter-list.pipe';
 import { TodoAnimationComponent } from './todo-animation/todo-animation.component';
 import { ObservableDemoComponent } from './observable-demo/observable-demo.component';
+import { StudentListHttpComponent } from './student/student-list-http/student-list-http.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +33,15 @@ import { ObservableDemoComponent } from './observable-demo/observable-demo.compo
     ExpoPipe,
     FilterListPipe,
     TodoAnimationComponent,
-    ObservableDemoComponent
+    ObservableDemoComponent,
+    StudentListHttpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

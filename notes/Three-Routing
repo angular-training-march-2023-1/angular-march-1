@@ -1,0 +1,11 @@
+Routing can be done in 2 ways
+------------------------------
+1. using hyperlinks
+2. programatically - using Router
+
+
+steps in Routing
+----------------
+1. provide route paths for the components that you would want to route to
+    This is done in app-routing.module.ts file, in the routes array
+2. use the <router-outlet> tag to tell where the routed compoenent should be displayed

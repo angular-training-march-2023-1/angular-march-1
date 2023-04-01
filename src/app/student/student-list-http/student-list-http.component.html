@@ -12,22 +12,21 @@
                 <th>PERCENTAGE</th>
                 <th>DOB</th>
                 <th>GENDER</th>
-                
+                <th></th>
             </tr>
         </thead>
         <tbody>
-            <!-- <tr *ngFor="let stud of allStudents" [ngClass]="{'bg-danger':stud.studentTotalMarks<250, 'bg-success':stud.studentTotalMarks>=250}"> -->
-            <!-- <tr appHoverHighlight *ngFor="let stud of allStudents | filterList:filterData"> -->
             <tr *ngFor="let stud of allStudents">
                 <td>{{ stud.id }}</td>
                 <td>{{ stud.studentName | uppercase }}</td>
-                <!-- <td>{{ stud.studentTotalMarks | currency:'INR':'code' }}</td> -->
                 <td>{{ stud.studentTotalMarks }}</td>
                 <td>{{ stud.studentTotalMarks/500 | percent }}</td>
                 <td>{{ stud.studentDOB | date:'short' }}</td>
                 <td>{{ stud.studentGender }}</td>
+                <td><button type="button" class="btn btn-danger" (click)="deleteStudent(stud.id)">Remove</button></td>
             </tr>
         </tbody>
     </table>
     <button type="button" class="btn btn-success" (click)="addTestStudent()">Add Test Student</button>
 </div>
+
