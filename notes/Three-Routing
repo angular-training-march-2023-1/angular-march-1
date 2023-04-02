@@ -1,8 +1,9 @@
 Routing can be done in 2 ways
 ------------------------------
-1. using hyperlinks
+1. using hyperlinks with routerLink ( DO NOT USE href)
+    - here thr routing is done on the template
 2. programatically - using Router
-
+    - here the routing is done on the component class
 
 steps in Routing
 ----------------

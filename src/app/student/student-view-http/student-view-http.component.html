@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header bg-warning text-white">
+            <h3> STUDENT INFORMATION</h3>
+        </div>
+        <div class="card-body">
+            <p>Student ID: {{ fetchedStudent.id }}</p>
+            <p>Student Name: {{ fetchedStudent.studentName }}</p>
+            <p>Student Mark: {{ fetchedStudent.studentTotalMarks }}</p>
+            <p>Student Gender: {{ fetchedStudent.studentGender }}</p>
+        </div>
+        <div class="card-footer bg-warning">
+            <button type="button" class="btn btn-primary text-white" (click)="back()">Back</button>
+        </div>
+    </div>
+</div>

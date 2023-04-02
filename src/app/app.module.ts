@@ -19,6 +19,10 @@ import { FilterListPipe } from './custom-pipes/filter-list.pipe';
 import { TodoAnimationComponent } from './todo-animation/todo-animation.component';
 import { ObservableDemoComponent } from './observable-demo/observable-demo.component';
 import { StudentListHttpComponent } from './student/student-list-http/student-list-http.component';
+import { WeatherComponent } from './weather/weather.component';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { HeaderComponent } from './header/header.component';
+import { StudentViewHttpComponent } from './student/student-view-http/student-view-http.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { StudentListHttpComponent } from './student/student-list-http/student-li
     FilterListPipe,
     TodoAnimationComponent,
     ObservableDemoComponent,
-    StudentListHttpComponent
+    StudentListHttpComponent,
+    WeatherComponent,
+    ProductListComponent,
+    HeaderComponent,
+    StudentViewHttpComponent
   ],
   imports: [
     BrowserModule,

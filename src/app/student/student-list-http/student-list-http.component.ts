@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StudentHttpService } from 'src/app/services/student-http.service';
 import { Student } from '../student.model';
 
@@ -12,7 +13,7 @@ export class StudentListHttpComponent implements OnInit {
 
   allStudents: Student[] = [];
 
-  constructor(private studentHttpService: StudentHttpService){}
+  constructor(private studentHttpService: StudentHttpService, private router: Router){}
 
   loadData(){
     this.studentHttpService.getAllStudents().subscribe({
@@ -40,6 +41,15 @@ export class StudentListHttpComponent implements OnInit {
     })
   }
 
+  viewStudent(studId: number){
+    // here we should navigate/route to student-view-http
+    // for this we need Router API
+    // so let us inject Router in the constructor
+
+    this.router.navigate(['student-view-http', studId]); // here we are passing studId as a route parameter
+                                                            // which will reach the routed component
+                                                            
+  }
 
   addTestStudent(){
 

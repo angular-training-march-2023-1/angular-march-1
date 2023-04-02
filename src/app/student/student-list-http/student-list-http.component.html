@@ -13,6 +13,7 @@
                 <th>DOB</th>
                 <th>GENDER</th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -24,6 +25,7 @@
                 <td>{{ stud.studentDOB | date:'short' }}</td>
                 <td>{{ stud.studentGender }}</td>
                 <td><button type="button" class="btn btn-danger" (click)="deleteStudent(stud.id)">Remove</button></td>
+                <td><button type="button" class="btn btn-warning" (click)="viewStudent(stud.id)">View</button></td>
             </tr>
         </tbody>
     </table>
