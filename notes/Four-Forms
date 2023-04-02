@@ -1,0 +1,25 @@
+2 types of form
+--------------
+1. Template driven form
+    - will create Add Student form using template driven form
+    - here angular creates the FormControl object for your form/input elements
+    - for this we use the ngModel directive in the template
+    - we can create simple forms here
+
+2. Reactive form
+    - will create Edit Student Form using Reactive Form
+    - here we will create the FormControl object
+    - so the coding starts from the component class, we will not use ngModel in the template
+    - here we can create complex forms  - dynamically add or remove form elements from the form
+
+concept
+-------
+
+<form>
+
+</form>
+
+- the moment we use the form tag in the template, angular creates a NgForm object internally
+- we are going to get a reference to this NgForm object
+- for getting a refrence we create a template variable for the form tag on the template
+- and we equate it to ngForm

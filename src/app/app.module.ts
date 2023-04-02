@@ -23,6 +23,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { HeaderComponent } from './header/header.component';
 import { StudentViewHttpComponent } from './student/student-view-http/student-view-http.component';
+import { StudentAddHttpComponent } from './student/student-add-http/student-add-http.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { StudentViewHttpComponent } from './student/student-view-http/student-vi
     WeatherComponent,
     ProductListComponent,
     HeaderComponent,
-    StudentViewHttpComponent
+    StudentViewHttpComponent,
+    StudentAddHttpComponent
   ],
   imports: [
     BrowserModule,

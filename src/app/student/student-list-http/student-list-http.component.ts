@@ -48,7 +48,12 @@ export class StudentListHttpComponent implements OnInit {
 
     this.router.navigate(['student-view-http', studId]); // here we are passing studId as a route parameter
                                                             // which will reach the routed component
-                                                            
+
+  }
+
+  addStudent(){
+    // here we should navigate to student-add-http 
+    this.router.navigate(['student-add-http']);
   }
 
   addTestStudent(){
