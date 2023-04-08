@@ -20,12 +20,12 @@ export class StudentHttpService {
     return this.httpClient.get<Student>(this.baseUrl+'/'+studId);
   }
 
-  addStudent(){
-
+  addStudent(student: Student): Observable<Student>{
+    return this.httpClient.post<Student>(this.baseUrl, student);
   }
 
-  updateStudent(){
-
+  updateStudent(student: Student): Observable<Student>{
+    return this.httpClient.put<Student>(this.baseUrl+'/'+student.id, student);
   }
 
   deleteStudent(studId: number): Observable<void>{

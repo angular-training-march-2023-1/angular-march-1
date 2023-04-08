@@ -20,6 +20,20 @@
       "studentTotalMarks": "50",
       "studentDOB": "01-01-1998",
       "studentGender": "Female"
+    },
+    {
+      "id": 105,
+      "studentName": "Will Smith",
+      "studentTotalMarks": "400",
+      "studentDOB": "2023-04-01",
+      "studentGender": "Male"
+    },
+    {
+      "id": 106,
+      "studentName": "",
+      "studentTotalMarks": "400",
+      "studentDOB": "",
+      "studentGender": "Male"
     }
   ]
 }
