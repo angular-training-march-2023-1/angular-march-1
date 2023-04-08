@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DisplayComponent } from './display/display.component';
 import { CounterComponent } from './counter/counter.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ColorsParentComponent } from './colors-parent/colors-parent.component';
 import { ColorsChildComponent } from './colors-parent/colors-child/colors-child.component';
 import { StudentListComponent } from './student/student-list/student-list.component';
@@ -24,6 +24,7 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { HeaderComponent } from './header/header.component';
 import { StudentViewHttpComponent } from './student/student-view-http/student-view-http.component';
 import { StudentAddHttpComponent } from './student/student-add-http/student-add-http.component';
+import { StudentEditHttpComponent } from './student/student-edit-http/student-edit-http.component';
 
 @NgModule({
   declarations: [
@@ -44,14 +45,16 @@ import { StudentAddHttpComponent } from './student/student-add-http/student-add-
     ProductListComponent,
     HeaderComponent,
     StudentViewHttpComponent,
-    StudentAddHttpComponent
+    StudentAddHttpComponent,
+    StudentEditHttpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,12 +5,14 @@
     - here angular creates the FormControl object for your form/input elements
     - for this we use the ngModel directive in the template
     - we can create simple forms here
+    - make sure to add FormsModule in app.module.ts file
 
 2. Reactive form
     - will create Edit Student Form using Reactive Form
     - here we will create the FormControl object
     - so the coding starts from the component class, we will not use ngModel in the template
     - here we can create complex forms  - dynamically add or remove form elements from the form
+    - make sure to add ReactiveFormsModule in app.module.ts file
 
 concept
 -------

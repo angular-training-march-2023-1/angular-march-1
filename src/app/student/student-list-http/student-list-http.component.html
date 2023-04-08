@@ -15,6 +15,7 @@
                 <th>GENDER</th>
                 <th></th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -25,8 +26,9 @@
                 <td>{{ stud.studentTotalMarks/500 | percent }}</td>
                 <td>{{ stud.studentDOB | date:'short' }}</td>
                 <td>{{ stud.studentGender }}</td>
-                <td><button type="button" class="btn btn-danger" (click)="deleteStudent(stud.id)">Remove</button></td>
                 <td><button type="button" class="btn btn-warning" (click)="viewStudent(stud.id)">View</button></td>
+                <td><button type="button" class="btn btn-primary" (click)="editStudent(stud.id)">Edit</button></td>
+                <td><button type="button" class="btn btn-danger" (click)="deleteStudent(stud.id)">Remove</button></td>
             </tr>
         </tbody>
     </table>

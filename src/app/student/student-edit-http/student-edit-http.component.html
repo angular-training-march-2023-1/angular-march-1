@@ -1,0 +1,75 @@
+<div class="container m-5">
+    <form (ngSubmit)="editStudent()" [formGroup]="myReactiveForm">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3>EDIT STUDENT</h3>
+            </div>
+            <div class="card-body">   
+                <div class="form-group">
+                    <label for="sName" class="form-label">Student Name *</label> 
+                    <div class="text-danger" *ngIf="!myReactiveForm.get('rsName')?.valid">
+                        Student Name is required!
+                    </div>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        id="sName"
+                        formControlName="rsName">
+                </div>
+                <div class="form-group">
+                    <label for="sMark" class="form-label">Student Mark *</label>
+                    <div class="text-danger" *ngIf="!myReactiveForm.get('rsMark')?.valid">
+                        Student Mark is required!
+                    </div>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        id="sMark"
+                        formControlName="rsMark">
+                </div>
+                <div class="form-group">
+                    <label for="sDob" class="form-label">Student DOB *</label>
+                    <div class="text-danger" *ngIf="!myReactiveForm.get('rsDob')?.valid">
+                        Student DOB is required!
+                    </div>
+                    <input 
+                        type="date-local" 
+                        class="form-control" 
+                        id="sDob"
+                        formControlName="rsDob">
+                </div>
+                <div>
+                    Student Gender:
+                    <div class="form-check">
+                        <input 
+                            type="radio" 
+                            class="form-check-input" 
+                            id="sMale" 
+                            value="Male"
+                            formControlName="rsGender">
+                        Male
+                        <label class="form-check-label" for="sMale"></label>
+                    </div>
+                    <div class="form-check">
+                        <input 
+                            type="radio" 
+                            class="form-check-input" 
+                            id="sFemale" 
+                            value="Female"
+                            formControlName="rsGender">
+                        Female
+                        <label class="form-check-label" for="sFemale"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-primary">
+                <button 
+                    type="submit" 
+                    class="btn btn-light text-primary"
+                    [disabled]="!myReactiveForm.valid">
+                    UPDATE
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

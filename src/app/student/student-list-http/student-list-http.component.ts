@@ -51,6 +51,11 @@ export class StudentListHttpComponent implements OnInit {
 
   }
 
+  editStudent(studId: number){
+    // here we should navigate to edit-student-http
+    this.router.navigate(['student-edit-http', studId]);
+  }
+
   addStudent(){
     // here we should navigate to student-add-http 
     this.router.navigate(['student-add-http']);
