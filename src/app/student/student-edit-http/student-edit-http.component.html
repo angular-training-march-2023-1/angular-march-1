@@ -7,8 +7,14 @@
             <div class="card-body">   
                 <div class="form-group">
                     <label for="sName" class="form-label">Student Name *</label> 
-                    <div class="text-danger" *ngIf="!myReactiveForm.get('rsName')?.valid">
+                    <div class="text-danger" *ngIf="myReactiveForm.get('rsName')?.errors?.['required']">
                         Student Name is required!
+                    </div>
+                    <div class="text-danger" *ngIf="myReactiveForm.get('rsName')?.errors?.['minlength']">
+                        Student Name should be atleast 2 characters!
+                    </div>
+                    <div class="text-danger" *ngIf="myReactiveForm.get('rsName')?.errors?.['invalidText']">
+                        Student Name should contain only characters!
                     </div>
                     <input 
                         type="text" 
@@ -68,6 +74,9 @@
                     class="btn btn-light text-primary"
                     [disabled]="!myReactiveForm.valid">
                     UPDATE
+                </button>
+                <button type="button" (click)="addAnotherValidator()" class="btn btn-light text-primary">
+                    ADD VALIDATOR
                 </button>
             </div>
         </div>

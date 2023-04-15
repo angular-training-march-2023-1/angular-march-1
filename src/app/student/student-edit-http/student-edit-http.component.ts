@@ -15,7 +15,7 @@ export class StudentEditHttpComponent implements OnInit {
   // for this we will use formGroup and formControlName in the template
   myReactiveForm: FormGroup = new FormGroup({
     rsId: new FormControl(''),
-    rsName: new FormControl('', Validators.required),
+    rsName: new FormControl('', [Validators.required, this.onlyText]),
     rsMark: new FormControl('', Validators.required),
     rsDob: new FormControl('', Validators.required),
     rsGender: new FormControl('')
@@ -80,5 +80,23 @@ export class StudentEditHttpComponent implements OnInit {
       },
       error: (err)=>{ console.log(err) }
     })
+  }
+
+  addAnotherValidator(){
+    // here we are going to add another validator to rsName FormControl object
+    this.myReactiveForm.get('rsName')?.addValidators(Validators.minLength(2));
+    this.myReactiveForm.get('rsName')?.updateValueAndValidity();
+  }
+
+  // creating a custom validator function
+
+  onlyText(control: FormControl){
+    // here we will write logic for onlyText Validation
+    if(control.value!=null && !/^[A-Za-z\s]*$/.test(control.value)){
+      // this means the onlyText validator function is violated
+      // so we should return ValidationError
+      return ({ invalidText: true })
+    }
+    return null;
   }
 }

@@ -9,9 +9,13 @@ import { StudentEditHttpComponent } from './student/student-edit-http/student-ed
 import { StudentListHttpComponent } from './student/student-list-http/student-list-http.component';
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { StudentViewHttpComponent } from './student/student-view-http/student-view-http.component';
+import { LoginComponent } from './user/login/login.component';
+import { LogoutComponent } from './user/logout/logout.component';
 import { WeatherComponent } from './weather/weather.component';
 
 const routes: Routes = [
+  { path:'login', component: LoginComponent },
+  { path:'logout', component: LogoutComponent },
   { path:'display', component: DisplayComponent },
   { path:'counter', component: CounterComponent },
   { path:'colors', component: ColorsParentComponent , },
