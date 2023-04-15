@@ -27,13 +27,6 @@
       "studentTotalMarks": "400",
       "studentDOB": "2023-04-01",
       "studentGender": "Male"
-    },
-    {
-      "id": 106,
-      "studentName": "",
-      "studentTotalMarks": "400",
-      "studentDOB": "",
-      "studentGender": "Male"
     }
   ],
   "users": [

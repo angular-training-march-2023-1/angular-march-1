@@ -1,0 +1,25 @@
+commands ran during session
+-----------------------------
+1. docker pull hello-world
+2. docker images
+3. docker run hello-world
+4. docker ps -a
+
+steps to dockerize this angular application in nginx server
+----------------------------------------------------------
+1. create a dockerfile 
+    - because we want to create an image
+    - when a  dockerfile is built we will get an image
+2. build the dockerfile
+            docker build -t my-ang-image .
+    - building a dockerfile will result in an image
+    - -t can be used to give a name for the image
+    - confirm if the image my-ang-image is created by using docker images
+3. run the image
+            docker run --name my-ang-container -d -p 4444:80 my-ang-image
+    - this will create a container with nginx server running inside the container
+    - the defualt port 80 of nginx server inside the container is mapped to 4444 port on the local using -p 4444:80
+    - the --name gives a name to the container
+    - the -d runs the container detached mode
+4. open a browser and type http://localhost:4444 and you should see you application
+

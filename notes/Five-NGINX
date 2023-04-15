@@ -1,0 +1,24 @@
+1. Install NGINX server
+2. next we have to deploy our angular application in nginx server
+    2.1 First we have to build our angular application
+                ng build
+        this command will create a folder called dist and the built applicaiton is inside this folder
+    2.2 Next copy the contents of dist/angular-march-1 folder into html folder of NGINX
+    2.3 In NGINX folder's conf folder open nginx.conf file and paste the below lines
+            server {
+                    listen 6565;
+                    server_name localhost;
+                    location / {
+                    root html;
+                    index index.html index.htm;
+                    try_files $uri $uri/ /index.html;
+                    }
+                    error_page 500 502 503 504 /50x.html;
+                    location = /50x.html {
+                    root html;
+                    }
+                    }
+3. start the nginx server
+        for this this doublic on the nginx apllication in nginx folder
+4. now open a browser and type http://localhost:6565
+        you should be able to access the angular application deployed in nginx server
