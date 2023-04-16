@@ -12,20 +12,21 @@ import { StudentViewHttpComponent } from './student/student-view-http/student-vi
 import { LoginComponent } from './user/login/login.component';
 import { LogoutComponent } from './user/logout/logout.component';
 import { WeatherComponent } from './weather/weather.component';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
   { path:'login', component: LoginComponent },
   { path:'logout', component: LogoutComponent },
-  { path:'display', component: DisplayComponent },
-  { path:'counter', component: CounterComponent },
-  { path:'colors', component: ColorsParentComponent , },
-  { path:'student-list', component: StudentListComponent },
-  { path:'student-list-http', component: StudentListHttpComponent },
-  { path:'student-add-http', component: StudentAddHttpComponent },
-  { path:'student-edit-http/:sid', component: StudentEditHttpComponent },
-  { path:'student-view-http/:sid', component: StudentViewHttpComponent }, // http://localhost:4200/student-view-http/102
-  { path:'weather', component: WeatherComponent },
-  { path:'product', component: ProductListComponent },
+  { path:'display', component: DisplayComponent, canActivate: [LoginGuard] },
+  { path:'counter', component: CounterComponent, canActivate: [LoginGuard] },
+  { path:'colors', component: ColorsParentComponent , canActivate: [LoginGuard]},
+  { path:'student-list', component: StudentListComponent, canActivate: [LoginGuard] },
+  { path:'student-list-http', component: StudentListHttpComponent, canActivate: [LoginGuard] },
+  { path:'student-add-http', component: StudentAddHttpComponent , canActivate: [LoginGuard]},
+  { path:'student-edit-http/:sid', component: StudentEditHttpComponent, canActivate: [LoginGuard] },
+  { path:'student-view-http/:sid', component: StudentViewHttpComponent, canActivate: [LoginGuard] }, // http://localhost:4200/student-view-http/102
+  { path:'weather', component: WeatherComponent, canActivate: [LoginGuard] },
+  { path:'product', component: ProductListComponent, canActivate: [LoginGuard] },
 
 ];
 

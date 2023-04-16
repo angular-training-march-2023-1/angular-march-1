@@ -6,6 +6,10 @@ import { User } from '../user/user.model';
 })
 export class AuthService {
 // the purpose of this service is to manipulate the jwt token with the sesionStorage
+
+// in addition to this we will use AuthService to check if a user has logged in or not
+isLoggedIn: boolean = false;
+
   constructor() { }
 
   storeToken(user: User): void{

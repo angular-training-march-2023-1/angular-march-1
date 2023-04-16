@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit {
                       });
         if(filteredUser.length==1){
           // means login is susccess
+          this.authService.isLoggedIn = true;
           filteredUser[0].uPassword='';
           this.authService.storeToken(filteredUser[0]);
           this.router.navigate(['student-list-http']);
